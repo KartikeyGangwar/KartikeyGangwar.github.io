@@ -1,103 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Kartikey Singh</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      line-height: 1.65;
-      color: #111;
-      max-width: 760px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: #fff;
-    }
-    h1 {
-      font-size: 2.2em;
-      margin-bottom: 0.2em;
-    }
-    h2 {
-      font-size: 1.3em;
-      margin-top: 2em;
-      margin-bottom: 0.5em;
-    }
-    p {
-      margin-bottom: 1em;
-    }
-    ul {
-      margin-left: 1.2em;
-    }
-    a {
-      color: #111;
-      text-decoration: underline;
-    }
-    a:hover {
-      text-decoration: none;
-    }
-    .meta {
-      color: #444;
-      margin-bottom: 1.5em;
-    }
-    footer {
-      margin-top: 4em;
-      color: #666;
-      font-size: 0.9em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartikey Singh | Research</title>
+    <style>
+        /* Reset and base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #222;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Typography */
+        h1 {
+            font-weight: normal;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        h2 {
+            font-weight: normal;
+            font-size: 1.4rem;
+            margin: 2.5rem 0 1rem 0;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+        
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Links */
+        a {
+            color: #000;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+        
+        a:hover {
+            text-decoration-thickness: 2px;
+        }
+        
+        /* Paper citation style */
+        .paper {
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            border-left: 3px solid #eee;
+        }
+        
+        .paper-title {
+            font-weight: bold;
+            display: block;
+        }
+        
+        .paper-doi {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Contact section */
+        .contact {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            body { padding: 30px 15px; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <h1>Kartikey Singh</h1>
+        <div class="subtitle">
+            Independent Researcher | Scientific Machine Learning
+        </div>
+    </header>
 
-<h1>Kartikey Singh</h1>
-<p class="meta">
-  Undergraduate Researcher — Scientific Machine Learning, Physics-Informed Neural Networks, Nonlinear PDEs
-</p>
+    <section id="about">
+        <h2>Focus</h2>
+        <p>
+            I formalized <strong>Solution Manifold Incompatibility (SMI)</strong> — 
+            a structural limitation of linear multi-fidelity methods for nonlinear PDEs. 
+            The work demonstrates that linear fusion of solutions from distinct nonlinear 
+            operators is mathematically inadmissible, regardless of optimization quality 
+            or model capacity.
+        </p>
+        <p>
+            My approach is implementation-driven: building computational experiments, 
+            isolating systematic failure modes, then formalizing observations through 
+            operator-theoretic arguments.
+        </p>
+    </section>
 
-<p>
-I work on scientific machine learning and numerical methods for nonlinear partial
-differential equations. My research introduced <strong>Solution Manifold
-Incompatibility (SMI)</strong>, a structural limitation of linear multi-fidelity
-physics-informed neural networks.
-</p>
+    <section id="research">
+        <h2>Research</h2>
+        
+        <div class="paper">
+            <span class="paper-title">Solution Manifold Incompatibility in Multi-Fidelity PINNs</span>
+            <br>
+            <em>Kartikey Singh</em>
+            <br>
+            <span class="paper-doi">
+                DOI: <a href="https://doi.org/10.5281/zenodo.17794638">10.5281/zenodo.17794638</a> | 
+                Code: <a href="https://github.com/KartikeyGangwar/MF-PINN-SMI-Failure-Modes">GitHub</a>
+            </span>
+            <p style="margin-top: 0.5rem;">
+                Introduces the SMI framework with analytical proofs of operator non-closure under linear fusion. 
+                Presents numerical experiments across Allen–Cahn, Burgers, and Navier–Stokes equations. 
+                Includes open-source implementation and diagnostic metrics.
+            </p>
+        </div>
+    </section>
 
-<p>
-My approach is <strong>implementation-first</strong>: I build computational systems,
-stress-test assumptions empirically, and then formalize the observed behavior
-mathematically.
-</p>
+    <section id="software">
+        <h2>Software</h2>
+        <ul>
+            <li>
+                <strong>MF-PINN SMI Study</strong> – 
+                <a href="https://github.com/KartikeyGangwar/MF-PINN-SMI-Failure-Modes">Full codebase</a> 
+                for reproducing paper results (PyTorch, LaTeX, documentation)
+            </li>
+            <li>
+                <strong>Lid-Driven Cavity Solver</strong> – 
+                <a href="https://github.com/KartikeyGangwar/Lid-Driven-Cavity-FDM-Solver">High-performance CFD</a> 
+                (finite difference, validated to Re=1000)
+            </li>
+            <li>
+                <strong>Fluid Dynamics PINNs</strong> – 
+                <a href="https://github.com/KartikeyGangwar/Fluid-Dynamics-PINNs">Comparative study</a> 
+                of formulations for Navier–Stokes
+            </li>
+        </ul>
+    </section>
 
-<h2>Research</h2>
+    <section id="cv">
+        <h2>Curriculum Vitae</h2>
+        <p>
+            <a href="Kartikey_Singh_CV.pdf">Download PDF</a> (updated Feb 2025)
+        </p>
+    </section>
 
-<p><strong>Solution Manifold Incompatibility in Multi-Fidelity PINNs</strong></p>
-<ul>
-  <li>Identified systematic failure of linear fusion for nonlinear PDEs</li>
-  <li>Formalized operator non-closure and tangency failure</li>
-  <li>Validated using PyTorch PINNs and a custom CFD solver (Re = 1000)</li>
-  <li>Published with permanent DOI and open-source code</li>
-</ul>
+    <section id="education">
+        <h2>Background</h2>
+        <p>
+            <strong>University of Delhi</strong><br>
+            B.Sc. (Honors) Mathematics, 2023–2027 (Expected)<br>
+            <em>Independent research conducted prior to formal research year</em>
+        </p>
+    </section>
 
-<p>
-<a href="https://doi.org/10.5281/zenodo.17794638">Paper (Zenodo)</a><br>
-<a href="https://github.com/KartikeyGangwar/MF-PINN-SMI-Failure-Modes">Code repository</a>
-</p>
-
-<h2>Links</h2>
-<p>
-<a href="Kartikey_Singh_CV.pdf">Curriculum Vitae (PDF)</a><br>
-<a href="https://github.com/KartikeyGangwar">GitHub</a><br>
-<a href="https://linkedin.com/in/kartikey-singh-2a3434329">LinkedIn</a>
-</p>
-
-<h2>Contact</h2>
-<p>
-kartikeygangwar525@gmail.com
-</p>
-
-<footer>
-  <p>© 2025 Kartikey Singh</p>
-</footer>
-
+    <footer class="contact">
+        <p>
+            <strong>Contact:</strong> kartikeygangwar525@gmail.com<br>
+            <strong>GitHub:</strong> <a href="https://github.com/KartikeyGangwar">KartikeyGangwar</a><br>
+            <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/kartikey-singh-2a3434329">kartikey-singh</a><br>
+            <strong>ORCID:</strong> 0009-0009-1973-7532
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: #888;">
+            This site is hosted on GitHub Pages. Last updated Feb 2025.
+        </p>
+    </footer>
 </body>
 </html>
