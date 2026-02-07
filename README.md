@@ -1,2 +1,5 @@
-# KartikeyGangwar.github.io
-Research portfolio of Kartikey Singh - SciML researcher focusing on physics-informed  neural networks, PDEs, and multi-fidelity learning. Includes CV, published paper, and open-source code.
+## License
+
+[![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+All content on this site is licensed under the Creative Commons Attribution 4.0 International License.
